@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="feed.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Feedback Form</h1>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Full Name</label>
+            <input type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter Full Name"/>
+          </div>
+          <div class="user-input-box">
+            <label for="username">Username</label>
+            <input type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter Username"/>
+          </div>
+          <div class="user-input-box">
+            <label for="email">Email</label>
+            <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"/>
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="Enter Phone Number"/>
+          </div>
+          <div class="user-input-box">
+          <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+        </div>
+        <P><B>How satisfied are you with our
+          customer support performance?</B><P>
+        <div class="ratings-container">
+          <div class="rating">
+            <button>
+              <img src="Images/image2/sad.png" /></button>
+            <small>Unhappy</small>
+          </div>
+          <div class="rating">
+            <button><img src="Images/image2/neutral.png" /></button>
+            <small>Neutral</small>
+          </div>
+          <div class="rating active">
+            <button>
+              <img src="Images/image2/laughing.png"  /></button>
+            <small>Satisfied</small>
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+        
+       
+      </form>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

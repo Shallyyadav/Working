@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style_admin.css">
+  <style>
+            main{
+                background: url("Images/background2.jpg");
+                background-size: cover;
+            }
+            
+            
+   </style>
+   <script type="text/javascript">
+           
+            function pfind()
+            {
+                document.form3.action="pfind.jsp";
+                document.form3.submit();
+            }
+            function pupdate()
+            {
+                document.form3.action="pupdate.jsp";
+                document.form3.submit();
+            }
+            function pdelete()
+            {
+                document.form3.action="pdelete.jsp";
+                document.form3.submit();
+            }
+            function pinsert()
+            {
+                document.form3.action="product_insert.jsp";
+                document.form3.submit();
+            }
+            
+        </script>
+</head>
+<body>
+
+  <header>
+      
+      <h1>Add Product</h1>
+  </header>
+  
+  <div class="container">
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="admin_page.html">Home</a></li>
+          <li><a href="admin_profile.html">Profile</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="cdisplay.jsp">View Categories</a></li>
+          <li><a href="add_product.html">Add Products</a></li>
+          <li><a href="pdisplay.jsp">View Products</a></li>
+          <li><a href="display_user.jsp">View User</a></li>
+          <li><a href="feedback_display.jsp">View Feedback</a></li>
+          <li><a href="index.html">Website</a></li>
+          <li><a href="admin_logout.jsp" target=_self>Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <form name="form3" method="GET" enctype="multipart/form-data" >
+          <fieldset>
+              <legend><b>Add Product</b></legend>
+              
+        <label for="p_id">Enter Product id:</label>
+        <input type="text" id="product-id" name="p_id" placeholder='product id' class="form-control" required="" ><br>
+        <label for="p_name">Enter Product name:</label>
+        <input type="text" id="product-name" name="p_name" placeholder='product name'  class="form-control" required=""><br>
+        <label for="p_cost">Enter Product price:</label>
+        <input type="text" id="product-price" name="p_cost" placeholder='price'  class="form-control" required=""><br>
+        <label for="p_category">Choose a category:</label>
+        <input type="text" list="l1" name="p_category"  class="form-control" required="">
+        <datalist id="l1">
+          <option value="Pen">Pen</option>
+          <option value="Notebook">Notebook</option>
+          <option value="Pencil">Pencil</option>
+          <option value="Highlighter">Highlighter</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </datalist><br>
+        <label for="image_path">Enter Product image path:</label>
+        <input type="text" class="form-control" id="images_path" name="image_path" placeholder="Your Product Image Path [Images/<filename>.<extention>]" required="">[Images/filename.extention]<br>
+            <center>
+                <input type="button" value="Add" onclick="pinsert()"/>
+                <input type="button" value="Delete" onclick="pdelete()"/>
+                <input type="button" value="Update" onclick="pupdate()"/>
+                <input type="button" value="Find" onclick="pfind()"/>
+            </center>
+          </fieldset>
+      </form>
+    </main>
+  </div>
+
+    </body>
+</html>

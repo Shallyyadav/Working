@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Stationery Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 110px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+       
+        .dropdown-content a {
+          color: black;
+          padding: 6px 5px 5px 2px;
+          text-decoration: none;
+          font-size: 2rem;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {background-color: #fff;}
+        .header dropdown:hover .p {color: green;}
+        .header .navbar a{
+            text-decoration: none;
+            font-size: 2rem;
+    
+        }
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+        </style>
+    
+        
+</head>
+<body>
+    <header class="header">
+       <img class="logo" src="Images/logo.png" alt="Pen&Paper logo" width="70" height="100" >
+       <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#Features">Features</a>
+        <a href="category.html">Products</a>
+        
+        <a href="#Reviews">Reviews</a>
+
+        <div class="dropdown">
+           <p style="font-size: 19px;"> Category</p>
+            <div class="dropdown-content">
+              <a href="pen.html">Pen</a>
+              <a href="notebook.html">Notebook</a>
+              <a href="pencil.html">Pencil</a>
+              <a href="highlighter.html">Highlighter</a>
+              <a href="miscellaneous.html">Miscellaneous</a>
+            </div>
+          </div>
+          &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+            <p style="font-size: 19px;"> Account</p>
+            <div class="dropdown-content">
+              <a href="signin.html">SignIn(User)</a>
+              <a href="logout.jsp">Sign Out</a>
+            </div>
+          </div>
+          
+
+       </nav>
+       <div class="icons">
+           <div class="fa fa-bars" id="menu-btn"></div>
+           <a href="search.html"><div class="fa fa-search" id="search-btn"></div></a>
+           <a href="category.html"><div class="fa fa-shopping-cart" id="cart-btn">
+           </div></a>
+           <a href="profile.html" target=_self><div class="fa fa-user" id="login-btn"></div></a>
+           
+         
+          
+       </div>
+
+       
+       
+       
+        </header>
+    
+        <h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="Images/BACKG.jpg" style="width:100%">
+  <div class="text">Caption One</div>
+  </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="Images/img2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="Images/backk.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+
+
+</div>
+<br>
+    
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+        
+   <section class="Features" id="Features">
+    <h1 class="heading"> Our <span>Features</span> </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="Images/del.webp">
+            <h3>Fast and Free Delivery </h3><br>
+            <p style="color: green;">Speedy delivery to ensure you receive your items as soon as possible</p>
+        </div>
+
+        <div class="box">
+            <img src="Images/payment.jpg">
+            <h3>Easy and Secure Payment</h3>
+             <p style="color: green;">Offer a variety of payment methods according to different
+             customers preferences</p>
+        </div>
+
+        <div class="box">
+            <img src="Images/deals.jpg">
+            <h3>Super offers and deals </h3>
+             <p style="color: green;">Limited and attractive offers.</p>
+        </div>
+    </div>
+</section>
+  <section class="Reviews" id="Reviews">
+    <h1 class="heading"> Customer <span>Reviews</span> </h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="Images/rj.png">
+            <h3>Shreya Singh </h3>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+               
+            </div>
+            <b> <p>the product quality is very good.<br>The colors of these pen are fab!</p></b>
+            <a href="#Reviews" class="links"></a>
+        </div>
+
+        <div class="box">
+            <img src="Images/jk.jpg">
+            <h3>Jeon Jungkook</h3>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+               
+            </div>
+           <b> <p>I just used it once and I'm in love with this pencil!</p></b>
+
+           <a href="#Reviews" class="links"></a>
+           
+        </div>
+
+        <div class="box">
+            <img src="Images/kv.jpg">
+            <h3>Kim Namjoon </h3>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+               
+            </div>
+            <b><p>The notebook design<br> are attractive and good. It's colors are eye catching.</p></b>
+          
+            <a href="#Reviews" class="links"></a>
+        </div>
+        
+    </div>
+
+
+
+    </section>
+  <section class="footer">
+    <div class="box-container">
+    <table border="0">
+        <tr >
+            <td>
+                
+                    
+                <div class="box">
+                    <h3> P&P <img src="Images/logo.png" height="40px" width="30px"></h3><!-- <i class= "fa fa-shooping-cart"></i>
+                        it used for icon-->
+                        <p>Feel Free to Contact us</p>
+                        
+                </div>
+            </td>
+            <td>
+                <div class="box">
+                    <h3> Contact Info </h3>
+                    <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91 9076540821</p>
+                    <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+91 8272855056</p>
+                    <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;penpaper1602@gmail.com</p>
+                    <p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Banasthali, Rajasthan</p>
+        
+                        
+                
+            </div>
+            </td>
+            <td>
+                <div class="box">
+                    <h3> Quick Links </h3>
+                    <a href="#Home" class="links"><i class="fa fa-arrow-right"></i>Home</a>
+                    <a href="#Features" class="links"><i class="fa fa-arrow-right"></i>Features</a>
+                    <a href="category.html" class="links"><i class="fa fa-arrow-right"></i>Products</a>
+                    <a href="category.html" class="links"><i class="fa fa-arrow-right"></i>Categories</a>
+                    <a href="#Reviews" class="links"><i class="fa fa-arrow-right"></i>Review</a>
+                    
+                    
+                        
+                
+            </div>
+        
+            </td>
+        </tr>
+    </table>
+    </div>
+    </section>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!--HTML CODE-->
+
+
+</section>
+<!--After Banner section closed-->
+
+
+<!--After features section closed-->
+<section class="features" id="features">
+    <h1 class="heading"> Our <span>Features</span> </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="image/feature-img-1.png">
+            <h3>Fresh and Organic </h3>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-2.png">
+            <h3>Fresh and Organic </h3>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-3.png">
+            <h3>Fresh and Organic </h3>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
+<!--Here after id is of javascript id, also we take h1 class=heading in css for stryling-->
+
+
+
+
+/* CSS CODE*/
+/*css code for banner after this code*/
+.heading
+{
+    text-align: center;
+    padding: 2rem 0; /* top&bottom se 2rem and left and right se 0*/ 
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.heading span{ /*to change the color of features*/
+    background: var(--green);
+    color: #fff;
+    display:  inline-block;
+    padding: .5rem 3rem; /*for gap*/
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%); /*this is basically for theshape of features*/
+}
+
+/* Before Media query code, After .home .content p*/
+/*features Code*/
+.features .box-container /* here we are styling in features the box container part*/
+{
+    border: 0px solid;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+
+}
+.features .box-container .box
+{
+    border: 0px solid red;
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: var(--outline);/*7.43 pe h video mein */
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);/*9.27 pe h video mein see at 9.56 some changes in root of css*/
+
+}
+
+.features .box-container .box:hover
+{
+    box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.features .box-container .box img
+{
+    margin: 1rem 0;
+    height: 15rem;
+}
+
+.features .box-container .box h3
+{
+    font-size: 2.5rem; line-height: 1.8;
+    color: var(--black);
+}
+
+.features .box-container .box p
+{
+    font-size: 1.5rem; line-height: 1.8;
+    color: var(--light-color);
+    padding-bottom: 1rem 0;
+}
+
+
+
+/* @media (max-width: 450px) portion ke font size ke baad*/
+.heading{
+    font-size: 2.5rem;/*for mobile screen*/
+}
+
+
+
+

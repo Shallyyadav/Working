@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style2.css" />
+     <script type="text/javascript">
+           
+            function finsert()
+            {
+                document.form5.action="feedback_insert.jsp";
+                document.form5.submit();
+            }
+        </script>
+  </head>
+  <body>
+    
+    <div id="panel" class="panel-container">
+      <p><b>tell us what you think?</b></p>
+      <form name="form5" method="GET">
+        <p><b>tell us what you think?</b></p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      <strong>How satisfied are you with our<br>
+        customer support performance?</strong>
+      <div class="ratings-container">
+          <label for="rating"></label>
+          <input type="radio" name="rating" value="Unhappy"><div class="rating"><img src="Images/image2/sad.png" /><small>Unhappy</small></div>
+          <input type="radio" name="rating" value="Neutral"><div class="rating"><img src="Images/image2/neutral.png" /><small>Neutral</small></div>
+          <input type="radio" name="rating" value="Satisfied"><div class="rating"><img src="Images/image2/laughing.png"/><small>Satisfied</small></div>
+      </div>
+      <input type="button" value="Send review" onclick="finsert()"/>
+      </form>
+    </div>
+  </body>
+  
+</html>

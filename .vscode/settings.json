@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\shrey\\Downloads\\mysql-connector.jar",
+        "d:\\java\\javaC\\derbyclient-10.2.2.0.jar"
+    ]
+}

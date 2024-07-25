@@ -1,0 +1,14 @@
+{
+    "elements": {},
+    "attributes": {
+        "crossorigin": {
+            "context": "script"
+        },
+        "margin:": {
+            "context": "img"
+        },
+        "row": {
+            "context": "textarea"
+        }
+    }
+}

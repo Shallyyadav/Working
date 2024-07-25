@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="searchstyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS-->	
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<!--External JS-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+            .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 5px 5px 2px;
+  text-decoration: none;
+  font-size: 2px;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #fff;}
+.header dropdown:hover .p {color: green;}
+         .header .navbar a{
+            text-decoration: none;
+            font-size: 2rem;
+        }
+            body{
+             background:rgb(240,239,243);
+             margin:auto;
+             display:flex;
+             flex-direction:column;
+             align-items:center;
+             justify-content:center;
+             padding-top: 155px;
+            
+}
+            .container{
+                width:700px;
+                height:520px;
+                background: #fff;
+                border-radius:15px;
+                border-shadow:4px 4px 30px rgba(0,0,0,0.06);
+                padding:20px;
+                overflow-y:scroll;
+                
+                
+                }
+                
+                .container::-webkit-scrollbar{
+                    display:none;
+                }
+                
+                
+               .container form{
+                   width:100%;
+                   border:1px solid rgb(82,74,235);
+                   border-radius:4px;
+                   display:flex;
+                   flex-direction:row;
+                   align-items:center;
+               }
+               .container form input{
+                   border:none;
+                   outline:none;
+                   box-shadow:none;
+                   width:100%;
+                   font-size:16px;
+                   font-width:600;
+                   padding:8px 10px;
+               }
+               .container form i {
+                   padding-left:10px;
+               }
+               .product-list{
+                   padding:20px 0;
+                   padding-left:40px;
+               }
+               .product{
+                   display:flex;
+                   align-items:center;
+                   cursor:pointer;
+                   padding-bottom:15px;
+               }
+               .product img{
+                   width:70px;
+                   height:90px;
+                   object-fit:cover;
+                   border-radius:5px;
+               }
+               .product .p-details{
+                   padding-left:15px;
+               }
+               .product .p-details h2{
+                   font-size:15px;
+                   color:#1d1d1d;
+               }
+               .product .p-details h3{
+                   font-size:12px;
+                   padding:1px 1px;
+                   
+               }
+              
+               #container{
+                padding: 100px 70px;
+                }
+                #shopping-cart{
+                    margin-top: 1%;
+                    padding: 1% 1%;
+                    height: 300px;
+                    width:1000px;
+                    background:rgb(240,239,243);
+                }
+                #footer{
+                    margin-bottom: 2%;
+                    margin-top: 1%;
+                    width: 1100px;
+                }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+  <img class="logo" src="Images/logo.png" alt="Pen&Paper logo" width="70" height="100" >
+  <nav class="navbar">
+   <a href="index.html">Home</a>
+   <a href="#Features">Features</a>
+   <a href="category.html">Products</a>
+   
+   <a href="feedback.html">Reviews</a>
+
+
+   
+   <div class="dropdown">
+    <p style="font-size: 19px;"> Category</p>
+     <div class="dropdown-content">
+       <a href="pen.html">Pen</a>
+       <a href="notebook.html">Notebook</a>
+       <a href="pencil.html">Pencil</a>
+       <a href="highlighter.html">Highlighter</a>
+       <a href="miscellaneous.html">Miscellaneous</a>
+     </div>
+   </div>
+   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+ <div class="dropdown">
+     <p style="font-size: 19px;"> Account</p>
+     <div class="dropdown-content">
+       <a href="signin.html">SignIn(User)</a>
+       <a href="logout.jsp">Sign Out</a>
+     </div>
+   </div>
+   
+  </nav>
+    <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <a href="#shopping-cart" >    <div class="fa fa-shopping-cart" id="cart-btn"></div></a>
+        <a href="profile.html" target=_self><div class="fa fa-user" id="login-btn"></div></a>
+    </div>
+
+  
+ 
+     
+  
+  
+</header>
+
+        <section class="container">
+        <form>
+            <i class="fa fa-search"></i>
+            <input type="text" id="search-item" placeholder="Search Product" onkeyup="search()">
+        </form>
+         
+            <div class="product-list" id="product-list">
+                <div class="product">
+                    <img src="Images/notebook.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Floral Spiral Notebook</h2>
+                        <p class="card-text shop-item-price">Rs 550.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/img/slippad.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Slip pad</h2>
+                        <p class="card-text shop-item-price">Rs 150.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/diary.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Cute Diary For Students</h2>
+                        <p class="card-text shop-item-price">Rs 300.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/classmate.jpeg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Classmate notebooks</h2>
+                        <p class="card-text shop-item-price">Rs 220.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/pen3.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Cello pens</h2>
+                        <p class="card-text shop-item-price">Rs 20.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/img/pens2..jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Classy pens</h2>
+                        <p class="card-text shop-item-price">Rs 30.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Highlighter.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Attractive Highlighter</h2>
+                        <p class="card-text shop-item-price">Rs 250.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/img/colorpenc.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Color pencils</h2>
+                        <p class="card-text shop-item-price">Rs 150.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/img/file.jpg" alt=""class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Assignment files</h2>
+                        <p class="card-text shop-item-price">Rs 200.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/notepad.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Numic Enviro Notepad</h2>
+                        <p class="card-text shop-item-price">Rs 479.20</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/mapped.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Maped Compass</h2>
+                        <p class="card-text shop-item-price"> Rs 55.0</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/circle.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Khyati Pro Circle Small</h2>
+                        <p class="card-text shop-item-price">Rs 14.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/sticky.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Hopax Neon Sticky Notes</h2>
+                        <p class="card-text shop-item-price">Rs 150.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/scissor.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Mapped-Scissors</h2>
+                        <p class="card-text shop-item-price">Rs 65.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/victor.png" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Classmate Victor Geometry Box</h2>
+                        <p class="card-text shop-item-price">Rs 100.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/painting.png" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Scholar Oil Painting Pad</h2>
+                        <p class="card-text shop-item-price">Rs 270.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/calculator.jpeg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Deli Smart Calculator M01010</h2>
+                        <p class="card-text shop-item-price">Rs 750.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/watercolours.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Watercolor Paint Set</h2>
+                        <p class="card-text shop-item-price">Rs 100.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/Img_miscllan/tape.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">MT Masking Tape Fab Pearl</h2>
+                        <p class="card-text shop-item-price">Rs 189.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/p2.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Simple Pencil Pouches</h2>
+                        <p class="card-text shop-item-price">Rs 150.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/p3.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Cute Pencil Case</h2>
+                        <p class="card-text shop-item-price">Rs 200.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/p4.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Zip Pencil Case</h2>
+                        <p class="card-text shop-item-price">Rs 210.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/blue.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Set of 4 Blue Spiral Notebook</h2>
+                        <p class="card-text shop-item-price">Rs 150.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                <div class="product">
+                    <img src="Images/gray.jpg" alt="" class="card-img-top shop-item-image">
+                    <div class="p-details">
+                        <h2 class="card-title shop-item-title">Blank Dove Gray Notebook</h2>
+                        <p class="card-text shop-item-price">Rs 300.00</p>
+                        <button type="button" style="width: 100px;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+                    </div> 
+                </div>
+                
+                
+            </div>
+        </section>   
+        
+        
+<section class="container content-section" id="shopping-cart">
+  
+  <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Shopping Cart</h3>
+ 
+ <table class="table table-hover table-cart">
+  <thead>
+    <tr>
+      <th  style="font-size: 15px;">Item</th>
+      <th style="font-size: 15px;">Price</th>
+      <th style="font-size: 15px;">Quantity</th>
+    </tr>
+  </thead>
+  <tbody class="cart-items">
+    
+     
+  </tbody>
+</table>
+
+    <div class="cart-total"> 
+      <strong class="cart-total-title" style="font-size: 15px;">Total</strong>
+      <span  class="cart-total-price" style="text-align: right;">$0</span>
+    </div>
+ 
+
+    <div class="btn-purchase" style="margin-top: 10%;">
+      <button type="button"  class="btn btn-dark btn-purchase " onclick="myFunc()"><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+    <script> 
+        function myFunc() { 
+            location.replace("payment.html"); 
+        } 
+    </script>
+    </div>
+
+</section>
+ 
+<!--Footer-->
+<section id="footer">
+  <div class="card text-center">
+   
+    <div class="card-body">
+      <h3 class="card-title"><img src="Images/logo.png" width="10%" margin: 6%;></i>Pen&Paper</a></h3>
+      <p>Thank You , Come Again !!!</p>
+    </div>
+    <div class="card-footer text-muted">
+       <p></p>
+       <p></p>
+    </div>
+  </div>
+</section>
+
+<script src="homescript.js"></script>
+
+    </body>
+</html>

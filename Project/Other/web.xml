@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>YourServlet</servlet-name>
+        <servlet-class>xyz.YourServlet</servlet-class>
+        <multipart-config>
+            <location>/tmp</location>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>20848820</max-request-size>
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YourServlet</servlet-name>
+        <url-pattern>/YourServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
